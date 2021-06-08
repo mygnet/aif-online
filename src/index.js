@@ -1,6 +1,11 @@
 import { connect } from 'net'
-
-module.exports = function(callback, host, port) {
+/**
+ * Check if there is internet connectivity
+ * @param {function} callback Function that is invoked with parameter success or failure
+ * @param {string} host Host to check, By default ers nodejs.org
+ * @param {number} port Port to check, by default port 80
+ */
+module.exports = function (callback, host, port) {
   let socket = connect({
     port: port || 80,
     host: host || 'nodejs.org'

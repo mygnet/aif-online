@@ -1,5 +1,14 @@
 {
   "presets": [
+    ["minify", {
+      "mangle": {
+         "exclude": { 
+           "callback": true, 
+           "host": true,
+           "port":true
+        } 
+      }
+    }],
     ["es2015", {
         "loose": true
     }]
